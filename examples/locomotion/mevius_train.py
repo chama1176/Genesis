@@ -102,8 +102,8 @@ def get_cfgs():
         "kp": 50.0,
         "kd": 2.0,
         # termination
-        "termination_if_roll_greater_than": 10,  # degree
-        "termination_if_pitch_greater_than": 10,
+        "termination_if_roll_greater_than": 20,  # degree
+        "termination_if_pitch_greater_than": 20,
         # base pose
         "base_init_pos": [0.0, 0.0, 0.42],
         "base_init_quat": [1.0, 0.0, 0.0, 0.0],
@@ -137,9 +137,9 @@ def get_cfgs():
     }
     command_cfg = {
         "num_commands": 3,
-        "lin_vel_x_range": [0.5, 0.5],
-        "lin_vel_y_range": [0, 0],
-        "ang_vel_range": [0, 0],
+        "lin_vel_x_range": [-1.0, 1.0],
+        "lin_vel_y_range": [-0.5, 0.5],
+        "ang_vel_range": [-0.5, 0.5],
     }
 
     return env_cfg, obs_cfg, reward_cfg, command_cfg
